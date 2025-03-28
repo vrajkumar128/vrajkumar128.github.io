@@ -1,0 +1,109 @@
+/**
+ * Responsive Gallery Styles
+ * Enhances the gallery expansion transitions between mobile and desktop views
+ */
+
+/* Ensure smooth transitions for all gallery elements */
+.gallery-item,
+.gallery-curve-wrapper,
+.gallery-cover,
+.gallery-header,
+.gallery-body,
+.gallery-action {
+    transition: all 0.3s ease;
+}
+
+/* Gallery expansion classes - mobile specific */
+@media only screen and (max-width: 992px) {
+    .gallery .gallery-expand.active .gallery-curve-wrapper {
+        padding-top: 56px;
+    }
+
+    .gallery .gallery-body.expanded-mobile {
+        width: 100%;
+        margin: 0;
+        padding: 20px;
+    }
+
+    .gallery .gallery-action.expanded-mobile {
+        right: 0;
+    }
+
+    .gallery .gallery-body.expanded-mobile .title-wrapper {
+        margin-top: 20px;
+    }
+
+    .gallery .gallery-body.expanded-mobile .carousel-wrapper {
+        margin: 30px 0 20px -15px;
+        width: calc(100% + 30px);
+    }
+}
+
+/* Gallery expansion classes - desktop specific */
+@media only screen and (min-width: 993px) {
+    .gallery .gallery-expand.active .gallery-curve-wrapper {
+        padding-top: 64px;
+    }
+
+    .gallery .gallery-body.expanded-desktop {
+        width: 70%;
+        margin: 0 15%;
+        padding: 40px;
+    }
+
+    .gallery .gallery-action.expanded-desktop {
+        right: 15%;
+    }
+
+    .gallery .gallery-body.expanded-desktop .title-wrapper {
+        margin-left: 40px;
+    }
+
+    .gallery .gallery-body.expanded-desktop .carousel-wrapper {
+        margin: 30px 0 20px -35px;
+        width: calc(100% + 70px);
+    }
+}
+
+/* Improve gallery item appearance */
+.gallery-cover {
+    height: 200px;
+    overflow: hidden;
+}
+
+.gallery-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery-header {
+    height: 60px;
+}
+
+/* Fix for expanded gallery cover */
+.gallery .gallery-expand.active .gallery-cover {
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+}
+
+.gallery .gallery-expand.active .gallery-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Fix for proper placeholder overlay behavior */
+#placeholder-overlay {
+    transition: opacity 0.3s !important;
+}
+
+/* Fix for navbar behaviors on mobile */
+@media only screen and (max-width: 600px) {
+    #placeholder-navbar .back-btn {
+        display: flex;
+        align-items: center;
+        height: 56px;
+    }
+}
