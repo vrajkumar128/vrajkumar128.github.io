@@ -2643,6 +2643,10 @@ input, select, textarea {
 			width: 6.25em;
 		}
 
+		.overlay {
+			background-color: rgba(16, 77, 123, 0.75);
+		}
+
 /* Footer */
 
 	#footer .icons {
