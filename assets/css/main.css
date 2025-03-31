@@ -2593,7 +2593,7 @@ input, select, textarea {
 		justify-content: space-between;
 		background-color: #1f1815;
 		background-attachment: scroll,								scroll;
-		background-image: url("images/overlay.png"), url("../../images/bg.png");
+		background-image: url("images/overlay.png"), url("../../images/bg2.png");
 		background-position: top left,							top left;
 		background-repeat: repeat,								no-repeat;
 		background-size: auto,								cover;
@@ -2629,6 +2629,14 @@ input, select, textarea {
 			padding-bottom: 29.75vh;
 		}
 
+		#header > .inner h1:last-of-type {
+			opacity: 0;
+		}
+
+		#header > .inner h1:last-of-type.animate__animated {
+			opacity: 1;
+		}
+
 		#header strong, #header b {
 			color: #ffffff;
 		}
@@ -2657,6 +2665,12 @@ input, select, textarea {
 			bottom: 0;
 			background-color: rgba(16, 77, 123, 0.5);
 			z-index: 0;
+		}
+
+		#typed {
+			font-size: 1.35em;
+			line-height: 1.75em;
+			margin: 0;
 		}
 
 /* Footer */
