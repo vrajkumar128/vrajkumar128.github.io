@@ -10,6 +10,8 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 	</head>
 	<body class="is-preload">
 		<!-- Header -->
@@ -17,8 +19,11 @@
 				<div class="background-overlay"></div>
 				<div class="inner">
 					<img src="images/avatar.jpg" alt="" style="opacity: 0" />
-					<h1><strong>Vivek Rajkumar</strong><br />
-					Full Stack Developer</h1>
+					<div id="typed-strings">
+						<h1><strong>Vivek Rajkumar</strong></h1>
+					</div>
+					<span id="typed"></span>
+					<h1>Full Stack Developer</h1>
 				</div>
 			</header>
 
@@ -43,7 +48,7 @@
 						<div class="row">
 							<article class="col-6 col-12-xsmall work-item">
 								<a href="images/fulls/01.jpg" class="image fit thumb"><img src="images/thumbs/01.jpg" alt="" /></a>
-								<h3>Magna sed consequat tempus</h3>
+								<h3>Colmar Academy</h3>
 								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
 							</article>
 							<article class="col-6 col-12-xsmall work-item">
@@ -110,8 +115,8 @@
 			<footer id="footer">
 				<div class="inner">
 					<ul class="icons">
-						<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-						<li><a href="#" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+						<li><a href="https://github.com/vrajkumar128" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						<li><a href="https://linkedin.com/in/~vivek" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
 					</ul>
 					<ul class="copyright">
 						<li>&copy; Vivek Rajkumar</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
@@ -126,6 +131,15 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
+			<script>
+				const typed = new Typed('#typed', {
+						stringsElement: "#typed-strings",
+						typeSpeed: 35,
+						showCursor: false, 
+						onComplete: function () {
+							$(".inner h1:last-of-type").addClass("animate__animated animate__fadeInUp");
+						}
+					});
+			</script>
 	</body>
 </html>
