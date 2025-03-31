@@ -2593,7 +2593,7 @@ input, select, textarea {
 		justify-content: space-between;
 		background-color: #1f1815;
 		background-attachment: scroll,								scroll;
-		background-image: url("images/overlay.png"), url("../../images/bg.jpg");
+		background-image: url("images/overlay.png"), url("../../images/bg.png");
 		background-position: top left,							top left;
 		background-repeat: repeat,								no-repeat;
 		background-size: auto,								cover;
@@ -2605,6 +2605,7 @@ input, select, textarea {
 		text-align: right;
 		top: 0;
 		width: 35%;
+		padding-bottom: 100vh;
 	}
 
 		#header > * {
@@ -2613,6 +2614,8 @@ input, select, textarea {
 			-ms-flex-shrink: 0;
 			flex-shrink: 0;
 			width: 100%;
+			/* position: relative;
+			z-index: 1; */
 		}
 
 		#header > .inner {
@@ -2621,6 +2624,8 @@ input, select, textarea {
 			-ms-flex-grow: 1;
 			flex-grow: 1;
 			margin: 0 0 2em 0;
+			position: relative;
+			z-index: 1;
 		}
 
 		#header strong, #header b {
@@ -2643,11 +2648,47 @@ input, select, textarea {
 			width: 6.25em;
 		}
 
-		.overlay {
-			background-color: rgba(16, 77, 123, 0.75);
+		.header-background-bottom {
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			width: 35%;
+			/* Match header width */
+			height: 40vh;
+			/* Tall enough to cover the gap */
+			background-color: #1f1815;
+			background-image: url("images/overlay.png"), url("../../images/bg.jpg");
+			background-position: left bottom;
+			/* Position at the bottom */
+			background-repeat: repeat, no-repeat;
+			background-size: auto, cover;
+			z-index: -1;
+			/* Below content but above original background */
+		}
+
+		.background-overlay {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background-color: rgba(16, 77, 123, 0.5);
+			z-index: 0;
 		}
 
 /* Footer */
+
+	#footer {
+			position: relative;
+				/* Ensure footer is positioned relative to its normal position */
+				z-index: 2;
+				/* Place above any background elements */
+	}
+
+	/* #footer > .inner {
+		position: relative;
+		z-index: 1;
+	} */
 
 	#footer .icons {
 		margin: 1em 0 0 0;
