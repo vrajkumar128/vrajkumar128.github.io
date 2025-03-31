@@ -2049,7 +2049,7 @@ input, select, textarea {
 			-webkit-transition: opacity 0.2s ease-in-out;
 			-ms-transition: opacity 0.2s ease-in-out;
 			transition: opacity 0.2s ease-in-out;
-			background: url("images/overlay.png");
+			/* background: url("images/overlay.png"); */
 			border-radius: 0.35em;
 			content: '';
 			display: block;
@@ -2626,6 +2626,7 @@ input, select, textarea {
 			margin: 0 0 2em 0;
 			position: relative;
 			z-index: 1;
+			padding-bottom: 29.75vh;
 		}
 
 		#header strong, #header b {
@@ -2648,24 +2649,6 @@ input, select, textarea {
 			width: 6.25em;
 		}
 
-		.header-background-bottom {
-			position: fixed;
-			bottom: 0;
-			left: 0;
-			width: 35%;
-			/* Match header width */
-			height: 40vh;
-			/* Tall enough to cover the gap */
-			background-color: #1f1815;
-			background-image: url("images/overlay.png"), url("../../images/bg.jpg");
-			background-position: left bottom;
-			/* Position at the bottom */
-			background-repeat: repeat, no-repeat;
-			background-size: auto, cover;
-			z-index: -1;
-			/* Below content but above original background */
-		}
-
 		.background-overlay {
 			position: absolute;
 			top: 0;
@@ -2679,16 +2662,9 @@ input, select, textarea {
 /* Footer */
 
 	#footer {
-			position: relative;
-				/* Ensure footer is positioned relative to its normal position */
-				z-index: 2;
-				/* Place above any background elements */
-	}
-
-	/* #footer > .inner {
 		position: relative;
 		z-index: 1;
-	} */
+	}
 
 	#footer .icons {
 		margin: 1em 0 0 0;
