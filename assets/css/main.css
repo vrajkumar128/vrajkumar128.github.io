@@ -2558,6 +2558,10 @@ input, select, textarea {
 		margin: 0 0 2em 0;
 	}
 
+	/* .work-description {
+		display: none;
+	} */
+
 		.work-item .image {
 			margin: 0 0 1.5em 0;
 		}
@@ -2868,7 +2872,17 @@ input, select, textarea {
 			text-align: center;
 			width: 100%;
 			z-index: 1;
+			/* height: auto !important;
+			min-height: 100px;
+			padding: 10px;
+			overflow: auto; */
 		}
+
+				.poptrox-popup .caption a.brands {
+					color: #000;
+					font-size: 2em;
+					padding: 10px;
+				}
 
 		.poptrox-popup .nav-next,
 		.poptrox-popup .nav-previous {

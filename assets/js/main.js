@@ -97,7 +97,15 @@
 			$window.on('load', function() {
 
 				$('#two').poptrox({
-					caption: function($a) { return $a.next('h3').text(); },
+					caption: function ($a) {
+						const githubUrl = $a.data('github');
+
+						if (githubUrl) {
+							return '<a href="' + githubUrl + '" target="_blank" class="icon brands fa-github"><span class="label">View Code</span></a>';
+						} else {
+							return '';
+						}
+					},
 					overlayColor: '#2c2c2c',
 					overlayOpacity: 0.85,
 					popupCloserText: '',
@@ -107,7 +115,9 @@
 					usePopupDefaultStyling: false,
 					usePopupEasyClose: false,
 					usePopupNav: true,
-					windowMargin: (breakpoints.active('<=small') ? 0 : 50)
+					windowMargin: (breakpoints.active('<=small') ? 0 : 50),
+					popupHeight: 'auto',  
+					popupCaptionHeight: 100
 				});
 
 			});
