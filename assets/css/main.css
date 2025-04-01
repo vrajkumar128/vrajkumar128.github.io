@@ -1818,10 +1818,10 @@ input, select, textarea {
 		-webkit-appearance: none;
 		-ms-appearance: none;
 		appearance: none;
-		background: #f7f7f7;
+		background: white;
 		border-radius: 0.35em;
 		border: solid 2px transparent;
-		color: inherit;
+		color: rgba(0, 0, 0, 0.65);
 		display: block;
 		outline: 0;
 		padding: 0 0.75em;
@@ -1842,7 +1842,7 @@ input, select, textarea {
 		input[type="email"]:focus,
 		select:focus,
 		textarea:focus {
-			border-color: #619be2;
+			border-color: rgba(16, 77, 123, 0.75);
 		}
 
 	select {
@@ -2446,7 +2446,7 @@ input, select, textarea {
 		transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 		background-color: transparent;
 		border-radius: 0.35em;
-		border: solid 3px #efefef;
+		border: solid 3px rgba(178, 178, 178, 0.75);
 		color: #787878 !important;
 		cursor: pointer;
 		display: inline-block;
@@ -2729,7 +2729,7 @@ input, select, textarea {
 		width: calc(100% - 35%);
 		position: relative;
 		z-index: 4;
-		background-color: white;
+		background-color: #F7F7F7;
 	}
 
 		#main > section {
