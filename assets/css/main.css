@@ -3207,6 +3207,11 @@ input, select, textarea {
 				margin: 0;
 				padding: 2em 4em;
 				width: 100%;
+				text-align: center;
+			}
+
+			.actions {
+				justify-content: center;
 			}
 
 	}
@@ -3311,11 +3316,16 @@ input, select, textarea {
 
 			#main {
 				padding: 1.5em 1.5em 0.25em 1.5em;
+				text-align: center;
 			}
 
 				#main > section {
 					margin: 2.25em 0 0 0;
 					padding: 2.25em 0 0 0;
+				}
+
+				.actions {
+					justify-content: center;
 				}
 
 		/* Poptrox */
@@ -3402,5 +3412,10 @@ input, select, textarea {
 
 			#main {
 				padding: 1.0em 1.5em 0.25em 1.5em;
+				text-align: center;
+			}
+
+			.actions {
+				justify-content: center;
 			}
 	}
