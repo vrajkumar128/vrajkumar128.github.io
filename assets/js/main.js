@@ -101,7 +101,7 @@
 						const githubUrl = $a.data('github');
 
 						if (githubUrl) {
-							return '<a href="' + githubUrl + '" target="_blank" class="icon brands fa-github"><span class="label">View Code</span></a>';
+							return '<a href="' + githubUrl + '" target="_blank" class="icon brands fa-github"><p>View Code</p></a>';
 						} else {
 							return '';
 						}
