@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://vivekrajkumar.io/sitemap.xml

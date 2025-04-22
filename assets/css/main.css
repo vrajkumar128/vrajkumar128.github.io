@@ -2677,6 +2677,8 @@ input, select, textarea {
 			line-height: 1.75em;
 			margin: 0;
 			white-space: nowrap;
+			min-height: 1.75em;
+			display: inline-block;
 		}
 
 /* Footer */
